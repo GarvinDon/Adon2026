@@ -1,3 +1,5 @@
-[00:00:03.310] Server  LOG     ✓ Ready in 2.2s
-[00:00:06.722] Server  ERROR   ⨯ TypeError: Cannot convert argument to a ByteString because the character at index 184 has a value of 26497 which is greater than 255.
-[00:00:08.222] Server  ERROR   ⨯ TypeError: Cannot convert argument to a ByteString because the character at index 184 has a value of 26497 which is greater than 255.
+[00:00:02.612] Server  LOG     ✓ Ready in 1603ms
+[00:00:04.829] Server  ERROR   ⨯ TypeError: Cannot convert argument to a ByteString because the character at index 184 has a value of 26497 which is greater than 255.
+[00:00:05.727] Server  ERROR   ⨯ TypeError: Cannot convert argument to a ByteString because the character at index 184 has a value of 26497 which is greater than 255.
+[00:00:06.653] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:08.265] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
