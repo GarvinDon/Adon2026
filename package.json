@@ -7,8 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "next build && touch out/.nojekyll && gh-pages -d out -b gh-pages -r https://gitee.com/garvindon/adonportfolio.git"
+    "lint": "next lint"
   },
   "keywords": [],
   "author": "",
