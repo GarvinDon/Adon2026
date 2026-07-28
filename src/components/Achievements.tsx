@@ -22,6 +22,13 @@ const achievements = [
     description: "建立统一设计规范，提升设计效率",
     icon: <TrendingUp className="w-6 h-6 text-purple-500" />,
   },
+  {
+    title: "AI驱动报错体验设计体系",
+    metric: "准确率 91.4%",
+    description: "AI Skill 嵌入研发流程，自动审查报错场景",
+    icon: <TrendingUp className="w-6 h-6 text-orange-500" />,
+    pdfPath: "/file/AI驱动的报错体验设计体系.pdf",
+  },
 ];
 
 const awards = [
@@ -60,6 +67,19 @@ export default function Achievements() {
                     <h3 className="text-lg font-bold text-gray-900">{item.title}</h3>
                     <div className="text-2xl font-black text-primary my-1">{item.metric}</div>
                     <p className="text-gray-600 text-sm">{item.description}</p>
+                    {"pdfPath" in item && item.pdfPath && (
+                      <a
+                        href={item.pdfPath}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 mt-2 text-xs font-medium text-primary hover:text-blue-600 transition-colors"
+                      >
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                        查看 PDF
+                      </a>
+                    )}
                   </div>
                 </motion.div>
               ))}

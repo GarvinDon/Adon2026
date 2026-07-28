@@ -17,6 +17,22 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "ai-error-ux",
+    projectName: "AI驱动报错体验优化",
+    title: "AI驱动报错体验优化",
+    slogan: "从人工经验，到 AI 工作流节点",
+    company: "个人项目",
+    period: "2025.6～至今",
+    role: "梳理报错规则与知识库，设计并封装轻量化 AI Skill",
+    description: "基于需求、设计、开发阶段的报错体验痛点，梳理报错规则，沉淀为统一知识库。封装 3 个轻量化 AI Skill，分别用于需求阶段遗漏场景识别、设计阶段方案评审、开发阶段规范一致性检查。将原本依赖人工经验的事后评审，前置为嵌入研发流程的 AI 自动审查节点，提升问题发现效率与设计一致性。",
+    result: "报错问题识别准确率 91.4%，建议采纳率 60.6%，支持多团队快速接入与复用",
+    tags: ["AI工作流", "体验规范", "Skill设计"],
+    highlight: "🚩从人工经验，到 AI 工作流节点",
+    skills: ["AI工作流/知识库", "Skill设计"],
+    image: "/images/AI驱动报错设计体系@1.5x.png",
+    pdfPath: "/file/AI驱动的报错体验设计体系.pdf",
+  },
+  {
     id: "after-sales-management",
     projectName: "极飞售后系统",
     title: "企业级售后管理系统体验设计与流程重构",

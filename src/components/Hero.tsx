@@ -19,10 +19,10 @@ export default function Hero() {
                 Hi, I'm <span className="text-primary">Adon</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 font-light leading-relaxed max-w-2xl">
-                8年交互设计经验 / 深圳 / 体验设计师 / 产品设计
+                7.5年交互设计经验 / 深圳 / 体验设计师
               </p>
               <p className="text-lg text-gray-500 mt-4 font-medium">
-                擅长处理 B 端高复杂交互流程优化
+                擅长复杂交互与体验系统化，具备 AI 能力产品化与跨团队协作能力
               </p>
             </motion.div>
 
