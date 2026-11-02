@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Layers, PenTool, Layout, Box, Users } from "lucide-react";
+import { Layers, PenTool, Layout, Box, Languages } from "lucide-react";
 
 const skillCategories = [
   {
@@ -58,6 +58,15 @@ export default function Skills() {
               </ul>
             </motion.div>
           ))}
+        </div>
+        <div className="mt-6 flex items-start gap-4 rounded-2xl border border-gray-100 bg-gray-50 p-6">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-primary">
+            <Languages className="h-6 w-6" aria-hidden="true" />
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-bold text-gray-900">英语能力</h3>
+            <p className="text-sm leading-7 text-gray-600">可阅读并理解设计、开发相关内容，文字沟通顺畅；口语交流尚不流利。</p>
+          </div>
         </div>
       </div>
     </section>

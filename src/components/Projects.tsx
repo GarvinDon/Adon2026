@@ -8,12 +8,12 @@ import { projects } from "@/data/projects";
 export default function Projects() {
   return (
     <section id="projects" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto max-w-6xl px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-12 text-center">
           Featured Projects
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -22,22 +22,23 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Link href={`/projects/${project.id}`} className="group block h-full">
+              <Link href={`/projects/${project.id}`} className="group block h-full rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
                 <div className="h-full bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 flex flex-col">
-                  {/* Image Placeholder */}
-                  <div className="h-48 bg-gray-200 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                  <div className="aspect-video bg-[#071228] relative overflow-hidden">
                      {project.image ? (
                         <img 
                           src={project.image} 
                           alt={project.projectName || project.title} 
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-contain"
+                          loading="lazy"
+                          decoding="async"
                         />
                      ) : (
                         <div className="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-100 group-hover:bg-gray-200 transition-colors">
                            Project Preview
                         </div>
                      )}
-                     <div className="absolute top-4 right-4 bg-white/90 backdrop-blur rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                     <div className="absolute top-4 right-4 bg-white/90 backdrop-blur rounded-full p-2 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity z-10">
                         <ArrowUpRight className="w-5 h-5 text-primary" />
                      </div>
                   </div>
@@ -51,23 +52,18 @@ export default function Projects() {
                       ))}
                     </div>
                     
-                    <h3 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-primary transition-colors">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
                       {project.projectName || project.title}
                     </h3>
                     
-                    {project.projectName && (
-                       <h4 className="text-sm font-medium text-gray-500 mb-3 line-clamp-2">
-                          {project.title}
-                       </h4>
-                    )}
-                    
-                    <p className="text-sm text-gray-500 mb-4 line-clamp-3">
-                      {project.description}
+                    <p className="text-sm leading-6 text-gray-500 mb-6">
+                      {project.summary}
                     </p>
 
                     <div className="mt-auto pt-4 border-t border-gray-100">
-                        <p className="text-xs font-semibold text-primary">
-                            {project.highlight}
+                        <p className="mb-2 text-xs text-gray-400">核心成果</p>
+                        <p className="text-sm font-semibold leading-6 text-primary">
+                            {project.cardResult}
                         </p>
                     </div>
                   </div>

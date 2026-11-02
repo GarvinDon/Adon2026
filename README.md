@@ -33,8 +33,13 @@ This is a portfolio website built with Next.js, React, Tailwind CSS, and Framer 
 
 ## Deployment
 
-This project can be easily deployed to Vercel or Netlify.
+This project requires a Next.js server, such as Vercel or a Node.js host, for password verification. The default password is `Adon` (case-sensitive). Optionally set `PORTFOLIO_PASSWORD` and `PORTFOLIO_SESSION_SECRET` in the hosting environment; see `.env.example`.
+
+Unauthenticated visitors are sent to `/login`, including when opening project pages, images, or PDFs directly. Successful verification returns visitors to their original URL. The signed, HttpOnly session cookie lasts for the browser session, with a maximum validity of 12 hours.
+
+The tracked `out/` directory is an old static export and does not include password protection. Do not publish it for the protected site; GitHub Pages and static-only hosting cannot run this server-side access check.
 
 ```bash
 npm run build
+npm start
 ```

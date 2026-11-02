@@ -6,8 +6,10 @@ import Experience from "@/components/Experience";
 import Achievements from "@/components/Achievements";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
+import { requirePortfolioAccess } from "@/lib/access";
 
-export default function Home() {
+export default async function Home() {
+  await requirePortfolioAccess();
   return (
     <main className="flex flex-col min-h-screen">
       <Navbar />
